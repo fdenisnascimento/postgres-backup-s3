@@ -3,7 +3,7 @@
 tag=$(date '+%d%m%Y_%H%M');
 image_name=fdenisnascimento/postgres-backup-s3
 
-docker build --platform=linux/amd64 -t $image_name .
+docker build --build-arg ALPINE_VERSION=3.17 --platform=linux/amd64 -t $image_name .
 docker push $image_name
 
 git add .
