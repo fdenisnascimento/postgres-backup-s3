@@ -8,7 +8,7 @@ docker push $image_name
 
 git add .
 git commit -am "new release"
-git push origin main --force
+git push origin master --force
 
 
 echo "Criando tag release_$tag"
